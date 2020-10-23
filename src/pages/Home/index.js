@@ -2,28 +2,43 @@ import React, { useState, useEffect } from 'react';
 import { BsTrash } from 'react-icons/bs';
 import { TiPinOutline } from 'react-icons/ti';
 
-import Form from '../../components/FormComponent';
 import api from '../../api/api';
 
 import '../../style/home.css';
+import '../../style/form.css';
 
 function Home() {
   const [flag, setFlag] = useState(false);
   const [data, setData] = useState([]);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   console.log(data);
   useEffect(() => {
     async function exec() {
       const data = await api.get('/recados');
       const json = await data.data;
-      setData(json.recados);
+      setData(json);
     }
     exec();
   }, []);
+
   useEffect(() => {
-    data.map(async (item) => {
-      await api.delete(`/recados/${item.id}`);
-    });
-  }, [data]);
+    setData(data);
+  }, [data, title, description, flag]);
+
+  async function del(id) {
+    await api.delete(`/recados/${id}`);
+  }
+
+  const handleCreateData = async (e) => {
+    e.preventDefault();
+  };
+  const enviar = async () => {
+    await api.post('/recados', { title, description });
+    setFlag(false);
+    setTitle('');
+    setDescription('');
+  };
 
   return (
     <div className="container">
@@ -36,10 +51,10 @@ function Home() {
       <div className="section">
         <div className="cardContainer">
           {data.map((item) => (
-            <div key={item.id} className="cards">
+            <div key={item._id} className="cards">
               <div className="cards-group">
                 <TiPinOutline size={22} />
-                <button className="deletar">
+                <button onClick={() => del(item._id)} className="deletar">
                   <BsTrash size={18} />
                 </button>
               </div>
@@ -49,7 +64,30 @@ function Home() {
           ))}
         </div>
       </div>
-      {flag ? <Form onClick={() => setFlag(false)} /> : null}
+      {flag ? (
+        <div className="formContainer">
+          <h2 className="formTitle">Novo recado</h2>
+          <form onSubmit={handleCreateData}>
+            <div className="input-group">
+              <label htmlFor="">Titúlo</label>
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.currentTarget.value)}
+                className="titulo"
+                type="text"
+              />
+            </div>
+            <label htmlFor="">Conteúdo</label>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+            <button onClick={enviar()} className="button" type="submit">
+              Criar
+            </button>
+          </form>
+        </div>
+      ) : null}
     </div>
   );
 }
