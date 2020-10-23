@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/front_end-muralrecados/static/css/main.bcfaef46.chunk.css",
+    "main.css": "/front_end-muralrecados/static/css/main.521d7a43.chunk.css",
     "main.js": "/front_end-muralrecados/static/js/main.9cfc141f.chunk.js",
     "main.js.map": "/front_end-muralrecados/static/js/main.9cfc141f.chunk.js.map",
     "runtime-main.js": "/front_end-muralrecados/static/js/runtime-main.724e79dc.js",
@@ -8,15 +8,15 @@
     "static/js/2.567edecc.chunk.js": "/front_end-muralrecados/static/js/2.567edecc.chunk.js",
     "static/js/2.567edecc.chunk.js.map": "/front_end-muralrecados/static/js/2.567edecc.chunk.js.map",
     "index.html": "/front_end-muralrecados/index.html",
-    "precache-manifest.b230a5649f0699d18b23eeef77f7128d.js": "/front_end-muralrecados/precache-manifest.b230a5649f0699d18b23eeef77f7128d.js",
+    "precache-manifest.08ea15398d2c350a3213ac0cd2a7bc19.js": "/front_end-muralrecados/precache-manifest.08ea15398d2c350a3213ac0cd2a7bc19.js",
     "service-worker.js": "/front_end-muralrecados/service-worker.js",
-    "static/css/main.bcfaef46.chunk.css.map": "/front_end-muralrecados/static/css/main.bcfaef46.chunk.css.map",
+    "static/css/main.521d7a43.chunk.css.map": "/front_end-muralrecados/static/css/main.521d7a43.chunk.css.map",
     "static/js/2.567edecc.chunk.js.LICENSE.txt": "/front_end-muralrecados/static/js/2.567edecc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.724e79dc.js",
     "static/js/2.567edecc.chunk.js",
-    "static/css/main.bcfaef46.chunk.css",
+    "static/css/main.521d7a43.chunk.css",
     "static/js/main.9cfc141f.chunk.js"
   ]
 }

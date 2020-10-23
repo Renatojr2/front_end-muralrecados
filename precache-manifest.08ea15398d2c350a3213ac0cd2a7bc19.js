@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd4debdb53146150dc39adc3683886f1",
+    "revision": "5bc2f4224d822bcdf0663543b2e53715",
     "url": "/front_end-muralrecados/index.html"
   },
   {
-    "revision": "5210609c1f3034c92106",
-    "url": "/front_end-muralrecados/static/css/main.bcfaef46.chunk.css"
+    "revision": "b2bf7e4b5bcb384be85e",
+    "url": "/front_end-muralrecados/static/css/main.521d7a43.chunk.css"
   },
   {
     "revision": "adbb6eacd6478e2dd3ca",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/front_end-muralrecados/static/js/2.567edecc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5210609c1f3034c92106",
+    "revision": "b2bf7e4b5bcb384be85e",
     "url": "/front_end-muralrecados/static/js/main.9cfc141f.chunk.js"
   },
   {
