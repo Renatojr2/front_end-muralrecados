@@ -1,6 +1,7 @@
 .container {
   background: #f2f2f2;
   height: 100vh;
+  width: 100%;
 }
 
 div.header {
@@ -30,12 +31,28 @@ button.adicionar:hover {
 .section {
   padding: 20px;
   margin-top: 15px;
+  width: 100vw;
 }
 
 .cardContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
+}
+@media (max-width: 1085px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 810px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cards {

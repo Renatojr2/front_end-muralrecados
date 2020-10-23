@@ -9,10 +9,12 @@ import '../../style/form.css';
 
 function Home() {
   const [flag, setFlag] = useState(false);
+  const [update, setUpdate] = useState(false);
+
   const [data, setData] = useState([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  console.log(data);
+
   useEffect(() => {
     async function exec() {
       const data = await api.get('/recados');
@@ -20,7 +22,7 @@ function Home() {
       setData(json);
     }
     exec();
-  }, []);
+  }, [flag, update]);
 
   useEffect(() => {
     setData(data);
@@ -28,6 +30,7 @@ function Home() {
 
   async function del(id) {
     await api.delete(`/recados/${id}`);
+    setUpdate(!update);
   }
 
   const handleCreateData = async (e) => {
@@ -82,7 +85,7 @@ function Home() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            <button onClick={enviar()} className="button" type="submit">
+            <button onClick={() => enviar()} className="button" type="submit">
               Criar
             </button>
           </form>
